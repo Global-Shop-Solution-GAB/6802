@@ -1,0 +1,1077 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Shortage..Create(BaseForm)
+Gui.F_Shortage..Size(15870,9675)
+Gui.F_Shortage..MinX(0)
+Gui.F_Shortage..MinY(0)
+Gui.F_Shortage..Position(0,0)
+Gui.F_Shortage..BackColor(-2147483633)
+Gui.F_Shortage..MousePointer(0)
+Gui.F_Shortage..Caption("Material Shortage")
+Gui.F_Shortage..MaxButton(True)
+Gui.F_Shortage..MinButton(True)
+Gui.F_Shortage..Sizeable(True)
+Gui.F_Shortage..Event(UnLoad,F_Shortage_UnLoad)
+Gui.F_Shortage..AlwaysOnTop(False)
+Gui.F_Shortage..FontName("Tahoma")
+Gui.F_Shortage..FontSize(8.25)
+Gui.F_Shortage..ControlBox(True)
+Gui.F_Shortage..Moveable(True)
+Gui.F_Shortage..ShowInTaskBar(True)
+Gui.F_Shortage..TitleBar(True)
+Gui.F_Shortage.frameWO.Create(Frame)
+Gui.F_Shortage.frameWO.Size(4230,1155)
+Gui.F_Shortage.frameWO.Position(75,105)
+Gui.F_Shortage.frameWO.Caption("Work Orders")
+Gui.F_Shortage.frameWO.Enabled(True)
+Gui.F_Shortage.frameWO.Visible(True)
+Gui.F_Shortage.frameWO.Zorder(0)
+Gui.F_Shortage.frameWO.FontName("Tahoma")
+Gui.F_Shortage.frameWO.FontSize(8.25)
+Gui.F_Shortage.lblWoBeg.Create(Label,"Beginning",True,1275,255,0,75,300,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Shortage.lblWoBeg.Parent("frameWO")
+Gui.F_Shortage.lblWoBeg.BorderStyle(0)
+Gui.F_Shortage.cmdWoEnd.Create(Button)
+Gui.F_Shortage.cmdWoEnd.Size(435,405)
+Gui.F_Shortage.cmdWoEnd.Position(3690,480)
+Gui.F_Shortage.cmdWoEnd.Parent("frameWO")
+Gui.F_Shortage.cmdWoEnd.Caption("^")
+Gui.F_Shortage.cmdWoEnd.Event(Click,cmdWoEnd_Click)
+Gui.F_Shortage.cmdWoEnd.TabStop(True)
+Gui.F_Shortage.cmdWoEnd.TabIndex(4)
+Gui.F_Shortage.cmdWoEnd.Enabled(True)
+Gui.F_Shortage.cmdWoEnd.Visible(True)
+Gui.F_Shortage.cmdWoEnd.Zorder(0)
+Gui.F_Shortage.cmdWoEnd.FontName("Tahoma")
+Gui.F_Shortage.cmdWoEnd.FontSize(8.25)
+Gui.F_Shortage.cmdWoBeg.Create(Button)
+Gui.F_Shortage.cmdWoBeg.Size(435,405)
+Gui.F_Shortage.cmdWoBeg.Position(1635,495)
+Gui.F_Shortage.cmdWoBeg.Parent("frameWO")
+Gui.F_Shortage.cmdWoBeg.Caption("^")
+Gui.F_Shortage.cmdWoBeg.Event(Click,cmdWoBeg_Click)
+Gui.F_Shortage.cmdWoBeg.TabStop(True)
+Gui.F_Shortage.cmdWoBeg.TabIndex(2)
+Gui.F_Shortage.cmdWoBeg.Enabled(True)
+Gui.F_Shortage.cmdWoBeg.Visible(True)
+Gui.F_Shortage.cmdWoBeg.Zorder(0)
+Gui.F_Shortage.cmdWoBeg.FontName("Tahoma")
+Gui.F_Shortage.cmdWoBeg.FontSize(8.25)
+Gui.F_Shortage.txtWoBeg.Create(TextBox,"",True,1530,300,0,75,555,True,0,"Arial",8,-2147483643,1)
+Gui.F_Shortage.txtWoBeg.Parent("frameWO")
+Gui.F_Shortage.txtWoBeg.Event(GotFocus,txtWoBeg_GotFocus)
+Gui.F_Shortage.txtWoBeg.Event(LostFocus,txtWoBeg_LostFocus)
+Gui.F_Shortage.txtWoBeg.TabStop(True)
+Gui.F_Shortage.txtWoBeg.TabIndex(1)
+Gui.F_Shortage.lblWoEnd.Create(Label,"Ending",True,840,255,0,2160,300,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Shortage.lblWoEnd.Parent("frameWO")
+Gui.F_Shortage.lblWoEnd.BorderStyle(0)
+Gui.F_Shortage.txtWoEnd.Create(TextBox,"",True,1440,300,0,2205,555,True,0,"Arial",8,-2147483643,1)
+Gui.F_Shortage.txtWoEnd.Parent("frameWO")
+Gui.F_Shortage.txtWoEnd.Event(GotFocus,txtWoEnd_GotFocus)
+Gui.F_Shortage.txtWoEnd.Event(LostFocus,txtWoEnd_LostFocus)
+Gui.F_Shortage.txtWoEnd.TabStop(True)
+Gui.F_Shortage.txtWoEnd.TabIndex(3)
+Gui.F_Shortage.cmdPrint.Create(Button)
+Gui.F_Shortage.cmdPrint.Size(930,375)
+Gui.F_Shortage.cmdPrint.Position(4530,615)
+Gui.F_Shortage.cmdPrint.Caption("Generate")
+Gui.F_Shortage.cmdPrint.Event(Click,cmdPrint_Click)
+Gui.F_Shortage.cmdPrint.TabStop(True)
+Gui.F_Shortage.cmdPrint.TabIndex(5)
+Gui.F_Shortage.cmdPrint.Enabled(True)
+Gui.F_Shortage.cmdPrint.Visible(True)
+Gui.F_Shortage.cmdPrint.Zorder(0)
+Gui.F_Shortage.cmdPrint.FontName("Tahoma")
+Gui.F_Shortage.cmdPrint.FontSize(8.25)
+Gui.F_Shortage.GsgcResult.Create(GsGridControl)
+Gui.F_Shortage.GsgcResult.Enabled(True)
+Gui.F_Shortage.GsgcResult.Visible(True)
+Gui.F_Shortage.GsgcResult.Zorder(0)
+Gui.F_Shortage.GsgcResult.Size(15690,7770)
+Gui.F_Shortage.GsgcResult.Position(105,1380)
+Gui.F_Shortage.GsgcResult.Anchor(15)
+Gui.F_Shortage.cmdDummy.Create(Button)
+Gui.F_Shortage.cmdDummy.Enabled(False)
+Gui.F_Shortage.cmdDummy.Visible(False)
+Gui.F_Shortage.cmdDummy.Zorder(0)
+Gui.F_Shortage.cmdDummy.Size(1125,345)
+Gui.F_Shortage.cmdDummy.Position(9165,660)
+Gui.F_Shortage.cmdDummy.Caption("Dummy")
+Gui.F_Shortage.cmdDummy.FontName("Tahoma")
+Gui.F_Shortage.cmdDummy.FontSize(8.25)
+Gui.F_Shortage.cmdDummy.Event(Click,cmdDummy_Click)
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Material Shortage")
+Gui.Form..Size(15360,10800)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(True)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form.GsGridControl1.Create(GsGridControl)
+Gui.Form.GsGridControl1.Enabled(True)
+Gui.Form.GsGridControl1.Visible(True)
+Gui.Form.GsGridControl1.Zorder(0)
+Gui.Form.GsGridControl1.Size(15255,9825)
+Gui.Form.GsGridControl1.Position(60,480)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+'GCG_5263_Material_Shortage
+v.Global.sBegWO.Declare
+v.Global.sBegSuffix.Declare
+v.Global.sSelectedBegPart.Declare
+v.Global.sSelectedBegDesc.Declare
+v.Global.sEndWO.Declare
+v.Global.sEndSuffix.Declare
+v.Global.sSelectedEndPart.Declare
+v.Global.sSelectedEndDesc.Declare
+v.Global.bWoExist.Declare
+
+v.Global.sFirstload.Declare(String)
+Program.Sub.Preflight.End
+
+'GCG_6802
+'custom for JST Manufacturing, Inc.
+
+'The customer is currently using ARC 5263 for their material shortage report and would like some
+'modifications to change the report and include an MRP view of each material item listed on the report.
+
+'1. Change the company name at the top of the report to pull directly from company options and move it to the Page header, not the report header.
+'2. Add the customers name in the Page Header just below the company name.
+'3. Remove the two columns “Qty On Hand Old” and “Qty RCVD”
+'4. Add a menu item which displays the report in an exportable gridview
+
+
+Program.Sub.Main.Start
+V.Local.bExists.Declare
+v.Global.sFirstload.Set(True)
+f.Intrinsic.Control.CallSub(LoadIcon)
+f.ODBC.Connection!con.OpenCompanyConnection
+'f.ODBC.Connection!con.OpenCompanyConnection
+f.ODBC.Connection!con.TableExists("GCG_6802_MAT_SHORT",v.Local.bExists)
+	f.Intrinsic.Control.If(v.Local.bExists,=,False)
+		f.ODBC.Connection!con.Execute("CREATE TABLE GCG_6802_MAT_SHORT (PART VARCHAR(20) NOT NULL, DESCRIPTION VARCHAR(30) NOT NULL, UM VARCHAR(2) NOT NULL, QTY_REQ NUMERIC(8,2) NOT NULL, QTY_ONHAND NUMERIC(8,2) NOT NULL, QTY_OLDREV NUMERIC(8,2), PO_NUMBER VARCHAR(7), PO_DUE VARCHAR(10), PO_QTY_ORD NUMERIC(8,2), PO_QTY_RCVD NUMERIC(8,2), PO_VENDOR VARCHAR(30), TERMINAL VARCHAR(6) NOT NULL, WORK_ORDER VARCHAR(6) NOT NULL, WORK_ORDER_SUFFIX VARCHAR(3) NOT NULL, WO_DUEDATE VARCHAR(10), WO_DESC VARCHAR(30), WO_PART VARCHAR(20), WO_JOB_SUFFIX VARCHAR(9), CUSTOMER_NAME VARCHAR(30));")
+	f.Intrinsic.Control.EndIf
+'f.ODBC.Connection!con.Close
+gui.F_Shortage..Show
+Program.Sub.Main.End
+
+Program.Sub.LoadIcon.Start
+v.Local.sIcon.Declare
+'sets the icon
+f.Intrinsic.String.Build("{0}\ART\gss2.ico", v.Caller.GlobalDir, v.Local.sIcon)
+'gui.F_chooseDept..Icon(v.Local.sIcon)
+Program.Sub.LoadIcon.End
+
+Program.Sub.cmdWoBeg_Click.Start
+v.Local.sRet.Declare
+v.Local.sWoHolder.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare
+f.Intrinsic.UI.SetBrowserHotTypeAhead(true)
+
+'gets the beginning work order
+f.Intrinsic.String.Split("Work Orders*!*Suffix*!*Part*!*Description", "*!*", v.Local.sTitles)
+f.Intrinsic.String.Split("1000*!*800*!*1500*!*4000", "*!*", v.Local.iWidths)
+'f.ODBC.Connection!con.OpenCompanyConnection
+	f.Intrinsic.UI.Browser("Select a beggining Work Order", "con", "Select job, suffix, part, description from V_Job_Header order by job asc", v.Local.sTitles, v.Local.iWidths, v.Local.sRet)
+'f.ODBC.Connection!con.Close
+'exits if it doesn't exist
+f.Intrinsic.Control.If(v.Local.sRet, =, "***CANCEL***")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+v.Local.sRet.RedimPreserve(0, v.Local.sRet.UBound)
+'setting selected WO in variables.
+v.Global.sBegWO.Set(v.Local.sRet(0))
+v.Global.sBegSuffix.Set(v.Local.sRet(1))
+v.Global.sSelectedBegPart.Set(v.Local.sRet(2))
+v.Global.sSelectedBegDesc.Set(v.Local.sRet(3))
+
+f.Intrinsic.String.Build("{0}-{1}", v.Global.sBegWO, v.Global.sBegSuffix, v.Local.sWoHolder)
+gui.F_Shortage.txtWoBeg.Text(v.Local.sWoHolder)
+'Ending textbox is empty, copy the information to ending variable.
+f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim, <>, "")
+	f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoEnd.Text!FieldValTrim, =, "")
+		gui.F_Shortage.txtWoEnd.Text(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+Program.Sub.cmdWoBeg_Click.End
+
+Program.Sub.cmdWoEnd_Click.Start
+v.Local.sRet.Declare
+v.Local.sWoHolder.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare
+'gets the ending work order
+f.Intrinsic.String.Split("Work Orders*!*Suffix*!*Part*!*Description", "*!*", v.Local.sTitles)
+f.Intrinsic.String.Split("1000*!*800*!*1500*!*4000", "*!*", v.Local.iWidths)
+'f.ODBC.Connection!con.OpenCompanyConnection
+	f.Intrinsic.UI.Browser("Select a beggining Work Order", "con", "Select job, suffix, part, description from V_Job_Header order by job asc", v.Local.sTitles, v.Local.iWidths, v.Local.sRet)
+'f.ODBC.Connection!con.Close
+'exists if it doesn't exist
+f.Intrinsic.Control.If(v.Local.sRet, =, "***CANCEL***")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+v.Local.sRet.RedimPreserve(0, v.Local.sRet.UBound)
+'setting selected WO in variables.
+v.Global.sEndWO.Set(v.Local.sRet(0))
+v.Global.sEndSuffix.Set(v.Local.sRet(1))
+v.Global.sSelectedEndPart.Set(v.Local.sRet(2))
+v.Global.sSelectedEndDesc.Set(v.Local.sRet(3))
+
+f.Intrinsic.String.Build("{0}-{1}", v.Global.sEndWO, v.Global.sEndSuffix, v.Local.sWoHolder)
+gui.F_Shortage.txtWoEnd.Text(v.Local.sWoHolder)
+Program.Sub.cmdWoEnd_Click.End
+
+Program.Sub.F_Shortage_UnLoad.Start
+f.ODBC.Connection!con.Close
+f.Intrinsic.Control.End
+Program.Sub.F_Shortage_UnLoad.End
+
+Program.Sub.txtWoBeg_GotFocus.Start
+gui.F_Shortage.txtWoBeg.BackColor(v.Color.LtGreen)
+Program.Sub.txtWoBeg_GotFocus.End
+
+Program.Sub.txtWoBeg_LostFocus.Start
+gui.F_Shortage.txtWoBeg.BackColor(v.Color.White)
+f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim, <>, "")
+	f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoEnd.Text!FieldValTrim, =, "")
+		gui.F_Shortage.txtWoEnd.Text(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+Program.Sub.txtWoBeg_LostFocus.End
+
+Program.Sub.txtWoEnd_GotFocus.Start
+gui.F_Shortage.txtWoEnd.BackColor(v.Color.LtGreen)
+Program.Sub.txtWoEnd_GotFocus.End
+
+Program.Sub.txtWoEnd_LostFocus.Start
+gui.F_Shortage.txtWoEnd.BackColor(v.Color.White)
+Program.Sub.txtWoEnd_LostFocus.End
+
+Program.Sub.cmdPrint_Click.Start
+v.Local.sSQL.Declare
+v.Local.sSplitHolder.Declare
+'checks if the texbox are empty
+
+f.Intrinsic.UI.InvokeWaitDialog("Building Report...")
+
+f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim, =, "")
+	f.Intrinsic.UI.Msgbox("Select a beggining Work Order")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.ElseIf(v.Screen.F_Shortage!txtWoEnd.Text!FieldValTrim, =, "")
+	f.Intrinsic.UI.Msgbox("Select a ending Work Order")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+'splits the text into variables, in case user didn't use a browser.
+f.Intrinsic.String.Split(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim, "-", v.Local.sSplitHolder)
+f.Intrinsic.Control.If(v.Local.sSplitHolder.UBound, =, 1)
+	v.Global.sBegWO.Set(v.Local.sSplitHolder(0))
+	v.Global.sBegSuffix.Set(v.Local.sSplitHolder(1))
+f.Intrinsic.Control.EndIf
+v.Local.sSplitHolder.Redim(0,0)
+f.Intrinsic.String.Split(v.Screen.F_Shortage!txtWoEnd.Text!FieldValTrim, "-", v.Local.sSplitHolder)
+f.Intrinsic.Control.If(v.Local.sSplitHolder.UBound, =, 1)
+	v.Global.sEndWO.Set(v.Local.sSplitHolder(0))
+	v.Global.sEndSuffix.Set(v.Local.sSplitHolder(1))
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Try	
+	'false if there are work orders, true if there are not.
+	v.Global.bWoExist.Set(false)
+	
+	f.Intrinsic.Control.CallSub(getWO)
+	f.Intrinsic.Control.If(v.Global.bWoExist, =, false)
+	'het data from gs datasjoshop
+		f.Intrinsic.Control.CallSub(getDistinctDT)
+		f.Intrinsic.Control.CallSub(getPOLines)
+		f.Intrinsic.Control.CallSub(getInv)
+		gui.F_Shortage..Visible(false)
+		f.Intrinsic.Control.CallSub(getPrePrintWOs)
+		
+		
+		'GCG_6802 DASHBOARD
+		'----------------------------------------------
+		f.Intrinsic.Control.CallSub(ShowDashboard)
+		
+		f.Intrinsic.Control.If(v.Global.sFirstload,=,True)
+			gui.F_Shortage..ContextMenuCreate("cmOptions")
+			gui.F_Shortage..ContextMenuAddItem("cmOptions","cmiExport",v.Enum.MenuItemType!Button,"Export")
+			gui.F_Shortage..ContextMenuSetItemEventHandler("cmOptions","cmiExport","ExportToExcelFile")
+			gui.F_Shortage..ContextMenuShow("cmOptions", 2000,2000)
+			gui.F_Shortage.GsgcResult.ContextMenuAttach("cmOptions")
+			v.Global.sFirstload.Set(False)
+		f.Intrinsic.Control.EndIf
+		'----------------------------------------------
+		
+		gui.F_Shortage..Visible(true)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.ShowDashboard.Start
+f.Intrinsic.Control.Try
+
+	v.Local.iRunID.Declare
+	v.Local.iLogID.Declare
+	v.Local.sParams.Declare
+	v.Local.sParamsValues.Declare
+	v.Local.iRPTID.Declare(Long, 0)
+	
+	
+	'update CustomerName 
+	f.Intrinsic.Control.CallSub(GetCustomerName)
+	
+	
+	f.Data.DataView.Close("woDT", "woDV")
+	f.Data.DataTable.Close("invDT")
+	f.Data.DataTable.Close("poDT")
+	f.Data.DataTable.Close("distJobDT")
+	f.Data.DataTable.Close("distPartDT")
+	f.Data.DataTable.Close("woOpDT")
+	f.Data.DataTable.Close("woDT")
+	
+	f.Intrinsic.Control.CallSub(GetData)
+	f.Intrinsic.Control.CallSub(FormatGrid)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.ShowDashboard.End
+
+'Get Data 
+'6802
+Program.Sub.GetData.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	f.Intrinsic.String.Build("select RTRIM(WORK_ORDER) WORKORDER, RTRIM(WORK_ORDER_SUFFIX) SUFFIX, RTRIM(CUSTOMER_NAME) CUSTOMER, RTRIM(WO_PART) WO_PART, RTRIM(WO_DESC) WO_PARTDESC, WO_DUEDATE, RTRIM(PART) PART, RTRIM(DESCRIPTION) PART_DESC, UM, QTY_REQ, QTY_ONHAND, PO_NUMBER, PO_DUE, PO_QTY_ORD, PO_QTY_RCVD, PO_VENDOR from GCG_6802_MAT_SHORT where TERMINAL = '{0}' order by WORKORDER, SUFFIX, PART, PO_QTY_ORD, PO_NUMBER", v.Caller.Terminal, v.Local.sSQL)
+	
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Intrinsic.Control.If(v.DataTable.dtOrders.Exists)
+			f.Data.Datatable.Close("dtOrders")
+		f.Intrinsic.Control.EndIf
+		f.Data.Datatable.CreateFromSQL("dtOrders", "Con", v.Local.sSQL, True)
+	
+	'Overall Demand by Part Dict
+	f.Data.Dictionary.CreateFromSQL("dictOverallDemand", "Con", "select RTRIM(PART), SUM(HOURS_ESTIMATED) from V_JOB_OPERATIONS  where PART <> '' and LMO = 'M' and FLAG_CLOSED <> 'Y' and RTRIM(JOB)+'-'+RTRIM(SUFFIX) not in (select RTRIM(REF.JOB)+'-'+RTRIM(REF.SUFFIX) from V_JOB_HEADER REF where DATE_CLOSED>'1900-01-01') group by PART")
+	f.Data.Dictionary.SetDefaultReturn("dictOverallDemand", 0)
+	
+	f.Data.Dictionary.CreateFromSQL("dictSODemand", "Con", "select RTRIM(PART), SUM(QTY_ORDERED-QTY_SHIPPED) from V_ORDER_LINES group by PART")
+	f.Data.Dictionary.SetDefaultReturn("dictSODemand",0)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtOrders.RowCount,>,0)
+		f.Data.Datatable.AddColumn("dtOrders", "OVERALL_DEMAND_WO", Float)
+		f.Data.Datatable.AddColumn("dtOrders", "OVERALL_DEMAND_SO", Float)
+		f.Data.Datatable.FillFromDictionary("dtOrders", "dictOverallDemand", "PART", "OVERALL_DEMAND_WO")
+		f.Data.Datatable.FillFromDictionary("dtOrders", "dictSODemand", "PART", "OVERALL_DEMAND_SO")
+		f.Data.Datatable.AddExpressionColumn("dtOrders", "OVERALL_DEMAND",Float, "OVERALL_DEMAND_WO + OVERALL_DEMAND_SO")
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.Dictionary.Close("dictOverallDemand")
+	f.Data.Dictionary.Close("dictSODemand")
+	'f.ODBC.Connection!con.Close
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetData.End
+
+'Format
+Program.Sub.FormatGrid.Start
+f.Intrinsic.Control.Try
+	
+	f.Intrinsic.Control.If(v.DataTable.dtOrders.RowCount,=,0)
+		f.Intrinsic.UI.Msgbox("There are no Material Shortage between the range selected")
+		f.Intrinsic.UI.CloseWaitDialog
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	gui.F_Shortage.GsgcResult.AddGridviewFromDatatable("gvOrders", "dtOrders")
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", v.Enum.GridViewPropertyNames!EnableAppearanceEvenRow, True)
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", v.Enum.GridViewPropertyNames!Editable, False)
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", v.Enum.GridViewPropertyNames!ReadOnly, True)
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", v.Enum.GridViewPropertyNames!SuppressNothingDates, True)
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", v.Enum.GridViewPropertyNames!ShowGroupPanel, True)
+	gui.F_Shortage.GsgcResult.SetGridviewProperty("gvOrders", "OptionsViewShowAutoFilterRow", true)
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PART", v.Enum.ColumnPropertyNames!Caption, "WO PART")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PARTDESC", v.Enum.ColumnPropertyNames!Caption, "WO PART DESCRIPTION")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART_DESC", v.Enum.ColumnPropertyNames!Caption, "PART DESCRIPTION")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_REQ", v.Enum.ColumnPropertyNames!Caption, "QTY REQ'D")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_ONHAND", v.Enum.ColumnPropertyNames!Caption, "QTY ONHAND")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_NUMBER", v.Enum.ColumnPropertyNames!Caption, "PO NUMBER")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_DUE", v.Enum.ColumnPropertyNames!Caption, "PO DUE DATE")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_ORD", v.Enum.ColumnPropertyNames!Caption, "PO QTY")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_VENDOR", v.Enum.ColumnPropertyNames!Caption, "PO VENDOR")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_DUEDATE", v.Enum.ColumnPropertyNames!Caption, "WO DUE DATE")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND", v.Enum.ColumnPropertyNames!Caption, "OVERALL DEMAND")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_WO", v.Enum.ColumnPropertyNames!Caption, "OVERALL DEMAND WO")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_SO", v.Enum.ColumnPropertyNames!Caption, "OVERALL DEMAND SO")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_RCVD", v.Enum.ColumnPropertyNames!Caption, "PO QTY RECV'D")
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PART", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PARTDESC", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART_DESC", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_REQ", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_ONHAND", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_NUMBER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_DUE", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_ORD", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_VENDOR", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_DUEDATE", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WORKORDER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "SUFFIX", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "CUSTOMER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "UM", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_WO", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_SO", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_RCVD", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PART", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PARTDESC", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART_DESC", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_REQ", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_ONHAND", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_NUMBER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_DUE", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_ORD", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_VENDOR", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_DUEDATE", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WORKORDER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "SUFFIX", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "CUSTOMER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "UM", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_RCVD", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+'	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "DATE_CREATED", v.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND", v.Enum.ColumnPropertyNames!DisplayCustomNumeric, "###,###.00")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND", v.Enum.ColumnPropertyNames!VisibleIndex, 10)
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_WO", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_SO", v.Enum.ColumnPropertyNames!Visible, False)
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_NUMBER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_DUE", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_DUEDATE", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WORKORDER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "SUFFIX", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "UM", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PART", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_PARTDESC", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART_DESC", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_REQ", v.Enum.ColumnPropertyNames!MinWidth, 80)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "QTY_ONHAND", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_NUMBER", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_DUE", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_ORD", v.Enum.ColumnPropertyNames!MinWidth, 80)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_VENDOR", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WO_DUEDATE", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "WORKORDER", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "SUFFIX", v.Enum.ColumnPropertyNames!MinWidth, 60)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "CUSTOMER", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PART", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "UM", v.Enum.ColumnPropertyNames!MinWidth, 40)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND", v.Enum.ColumnPropertyNames!MinWidth, 140)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_WO", v.Enum.ColumnPropertyNames!MinWidth, 140)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "OVERALL_DEMAND_SO", v.Enum.ColumnPropertyNames!MinWidth, 140)
+	gui.F_Shortage.GsgcResult.SetColumnProperty("gvOrders", "PO_QTY_RCVD", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	
+	gui.F_Shortage.GsgcResult.MainView("gvOrders")
+	f.Intrinsic.UI.CloseWaitDialog
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.FormatGrid.End
+
+Program.Sub.Catching.Start
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+Program.Sub.Catching.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+'Generic Error message.
+f.Intrinsic.String.Build("Project GCG_5263_Material_Shortage.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.getWO.Start
+v.Local.sSQL.Declare
+v.Local.sBegWo.Declare
+v.Local.sEndWo.Declare
+
+f.Intrinsic.String.Build("{0}{1}", v.Global.sBegWO, v.Global.sBegSuffix, v.Local.sBegWo)
+f.Intrinsic.String.Build("{0}{1}", v.Global.sEndWO, v.Global.sEndSuffix, v.Local.sEndWo)
+
+f.Intrinsic.Control.Try
+'gets the wos from the selected fields.
+	f.Intrinsic.Control.If(v.Screen.F_Shortage!txtWoBeg.Text!FieldValTrim, =, v.Screen.F_Shortage!txtWoEnd.Text!FieldValTrim)
+		'f.ODBC.Connection!con.OpenCompanyConnection
+			f.Intrinsic.String.Build("Select job, suffix, part, description, customer_po, qty_order, date_due from V_Job_Header where (job+suffix) = '{0}'",  v.Local.sBegWo, v.Local.sSQL)	
+			f.Data.DataTable.CreateFromSQL("woDT", "con", v.Local.sSQL, true)
+			
+'			f.Intrinsic.String.Build("select job, suffix, seq, part, lmo, description, units, Hours_Estimated from V_JOB_OPERATIONS where (job+suffix) = '{0}'",  v.Local.sBegWo, v.Local.sSQL)	
+			'6/27 
+			'GCG_6802
+			'recalculate and filter by REQ_QTY
+			'	REQ_QTY = HOURS_ACUTAL - UNITS
+			'	where REQ_QTY > 0 => only show materials that are not issued enough qty
+			f.Intrinsic.String.Build("select job, suffix, seq, part, lmo, description, (UNITS-HOURS_ACTUAL) units_CAL, Hours_Estimated from V_JOB_OPERATIONS where (job+suffix) = '{0}' and units_CAL > 0  and FLAG_CLOSED <> 'Y'",  v.Local.sBegWo, v.Local.sSQL)	
+			f.Data.DataTable.CreateFromSQL("woOpDT", "con", v.Local.sSQL, true)
+		'f.ODBC.Connection!con.Close	
+	f.Intrinsic.Control.Else		
+		'f.ODBC.Connection!con.OpenCompanyConnection
+			f.Intrinsic.String.Build("Select job, suffix, part, description, customer_po, qty_order, date_due from V_Job_Header where (job+suffix) between '{0}' and '{1}'", v.Local.sBegWo, v.Local.sEndWo, v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("woDT", "con", v.Local.sSQL, true)
+			
+			f.Intrinsic.String.Build("select job, suffix, seq, part, lmo, description, (UNITS-HOURS_ACTUAL) units_CAL, Hours_Estimated from V_JOB_OPERATIONS where FLAG_CLOSED <> 'Y' and units_CAL > 0 and (job+suffix) between '{0}' and '{1}'", v.Local.sBegWo, v.Local.sEndWo, v.Local.sSQL)	
+			f.Data.DataTable.CreateFromSQL("woOpDT", "con", v.Local.sSQL, true)			
+		'f.ODBC.Connection!con.Close		
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.If(v.DataTable.woDT.RowCount, =, 0)
+		f.Data.DataTable.Close("woDT")
+		f.Data.DataTable.Close("woOpDT")
+		f.Intrinsic.UI.Msgbox("There are no Work Order between the range selected")
+		v.Global.bWoExist.Set(true)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.getWO.End
+
+Program.Sub.getPOLines.Start
+v.Local.sSQL.Declare
+v.Local.iCnt.Declare
+'gets the po information
+f.Intrinsic.Control.Try
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("poDT", "con", "Select purchase_order, record_no, Part, Description, Job, sequence, date_due_line, qty_order, qty_received, vendor,  flag_recv_close from V_PO_Lines", true)
+	'f.ODBC.Connection!con.Close
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.getPOLines.End
+
+Program.Sub.getInvOLD.Start
+v.Local.sSQL.Declare
+'gets the inventory master information
+f.Intrinsic.Control.Try
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("invDT", "con", "Select part, description, um_inventory,  qty_onhand from V_INVENTORY_MSTR", true)
+	'f.ODBC.Connection!con.Close
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.getInvOLD.End
+
+
+'6802
+'june 6
+'New Mod for GetInv()
+Program.Sub.getInv.Start
+'gets the inventory master information
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare
+	v.Local.iCount.Declare(Long)
+	v.Local.sWO.Declare(String)
+	v.Local.sTemp.Declare(String)
+	
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.DataTable.CreateFromSQL("invDT", "con", "Select part, description, um_inventory,  qty_onhand from V_INVENTORY_MSTR where KEY_SOURCE in ('P','J')", true)
+		
+		'get list of non-inventory
+		'------------------------------------
+		'get list of WO
+		f.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.woDT.RowCount--,1)
+			f.Intrinsic.Control.If(v.Local.iCount,=,0)
+				f.Intrinsic.String.Build("'{0}-{1}'", v.DataTable.woDT(v.Local.iCount).JOB!FieldValTrim, v.DataTable.woDT(v.Local.iCount).SUFFIX!FieldValTrim, v.Local.sWO)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.String.Build("{0},'{1}-{2}'", v.Local.sWO, v.DataTable.woDT(v.Local.iCount).JOB!FieldValTrim, v.DataTable.woDT(v.Local.iCount).SUFFIX!FieldValTrim, v.Local.sWO)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCount)
+		
+		
+		'get list PART in the WO
+		f.Intrinsic.String.Build("select RTRIM(PART) part, '' description, UM um_inventory, 0 qty_onhand from V_JOB_OPERATIONS where LMO='M' and RTRIM(PART)<>'' and RTRIM(PART) not in (select RTRIM(PART) from V_INVENTORY_MSTR) and RTRIM(JOB)+'-'+RTRIM(SUFFIX) in ({0}) group by part, description, um_inventory, qty_onhand", v.Local.sWO, v.Local.sSQL)
+		
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL,v.Local.sTemp)
+		f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+			f.Intrinsic.Control.If(v.DataTable.nonInvDt.Exists)
+				f.Data.Datatable.Close("nonInvDt")
+			f.Intrinsic.Control.EndIf
+			f.Data.Datatable.CreateFromSQL("nonInvDt", "con", v.Local.sSQL, true)
+			f.Data.Datatable.Merge("nonInvDt", "invDT", True, 2)
+		f.Intrinsic.Control.EndIf
+		'------------------------------------
+		
+	'f.ODBC.Connection!con.Close
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.getInv.End
+
+Program.Sub.getPrePrintWOs.Start
+v.Local.sSQL.Declare
+v.Local.sFilter.Declare
+v.Local.iCntWoHeader.Declare
+v.Local.iCntWoDetail.Declare
+
+v.Local.sWOJob.Declare
+v.Local.sWOSuffix.Declare
+v.Local.sWODate.Declare
+v.Local.sWOPart.Declare
+v.Local.sWODescription.Declare
+v.Local.sWOJobSuffix.Declare
+
+v.Local.sDetailPart.Declare
+v.Local.sDetailDescription.Declare
+v.Local.sDetailUM.Declare
+v.Local.iDetailQtyOnHand.Declare
+v.Local.fDetailQtyReq.Declare
+v.Local.sDetailJob.Declare
+v.Local.sDetailSeq.Declare
+
+v.Local.sPO_Number.Declare
+v.Local.sPO_Vendor.Declare
+v.Local.sPO_Due.Declare
+v.Local.sPO_Qty_Ord.Declare
+v.Local.sPO_Qty_Rcvd.Declare
+
+v.Local.sPartNoRev.Declare
+v.Local.iCntAllRev.Declare
+v.Local.iAllRevQtyOnHand.Declare
+v.Local.iCntAllPo.Declare
+v.Local.fUnits.Declare
+v.Local.fHours_Estimated.Declare
+
+v.Local.sFirstChar.Declare(String)
+v.Local.fRunningPOQty.Declare(Float)
+
+
+
+'6802
+'temporarily NOT DELETE so we have data to test
+'Uncomment when deploy
+'----------------------------------------------
+f.Intrinsic.String.Build("Delete from GCG_6802_MAT_SHORT where terminal = '{0}'", v.Caller.Terminal, v.Local.sSQL)
+
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+	'f.ODBC.Connection!con.Close
+'----------------------------------------------
+
+
+
+'Loops throughs the selected workOrder.
+f.Intrinsic.Control.For(v.Local.iCntWoHeader, 0, v.DataTable.woDT.RowCount--, 1)
+
+
+	'6802
+	'june 6
+	'reset values before assigning new
+	'------------------------------------
+	v.Local.sWOJob.Set("")
+	v.Local.sWOSuffix.Set("")
+	v.Local.sWODate.Set("")
+	v.Local.sWOPart.Set("")
+	v.Local.sWODescription.Set("")
+	'------------------------------------
+	
+	
+	v.Local.sWOJob.Set(v.DataTable.woDT(v.Local.iCntWoHeader).Job!FieldValTrim)
+	v.Local.sWOSuffix.Set(v.DataTable.woDT(v.Local.iCntWoHeader).Suffix!FieldValTrim)
+	v.Local.sWODate.Set(v.DataTable.woDT(v.Local.iCntWoHeader).Date_Due!FieldValTrim)
+	v.Local.sWOPart.Set(v.DataTable.woDT(v.Local.iCntWoHeader).Part!FieldValTrim)
+	v.Local.sWODescription.Set(v.DataTable.woDT(v.Local.iCntWoHeader).Description!FieldValTrim)
+	
+	f.Intrinsic.String.Build("{0}{1}", v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sWOJobSuffix)
+	f.Intrinsic.String.Build("Job = '{0}' and Suffix = '{1}' and LMO = 'M' and Part <> ''", v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sFilter)
+	f.Data.DataView.Create("woOpDT", "detailDV", 22, v.Local.sFilter, "Job")
+	
+	'6802
+	'june 6
+	'comment: looping thru WO Operations DT, filtering by JOB, SUFFIX where LMO = M and PART is not empty
+	'		check if the non-inventory parts show up in the V_JOB_OPERATIONS table
+	'		
+	f.Intrinsic.Control.For(v.Local.iCntWoDetail, 0, v.DataView.woOpDT!detailDV.RowCount--, 1)
+		
+		
+		'6802
+		'june 6
+		'reset values before assigning new
+		'------------------------------------
+		v.Local.sDetailPart.Set("")
+		v.Local.sDetailDescription.Set("")
+		v.Local.sDetailJob.Set("")
+		v.Local.sDetailSeq.Set("")
+		v.Local.fUnits.Set(0)
+		v.Local.fHours_Estimated.Set(0)
+		v.Local.fDetailQtyReq.Set(0)
+		v.Local.sFilter.Set("")
+		'------------------------------------
+		
+		
+		v.Local.sDetailPart.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).Part!FieldValTrim)
+		v.Local.sDetailDescription.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).Description!FieldValTrim)
+		v.Local.sDetailJob.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).Job!FieldValTrim)
+		v.Local.sDetailSeq.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).Seq!FieldValTrim)
+		
+		'unit is the amount required in the Router
+		v.Local.fUnits.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).units_CAL!FieldVal)
+		v.Local.fHours_Estimated.Set(v.DataView.woOpDT!detailDV(v.Local.iCntWoDetail).Hours_Estimated!FieldVal)
+		
+		'f.Intrinsic.Math.Div(v.Local.fHours_Estimated, v.Local.fUnits, v.Local.fDetailQtyReq)
+		v.Local.fDetailQtyReq.Set(v.Local.fUnits.String)
+		
+		
+		'6802
+		'june 6
+		'comment: must note here that the invDT is getting list of Part from V_INVENTORY_MSTR
+		'		This could cause the issue that non-inventory PARTs not showing in the list
+		'		----------------------------------------------------------------------
+		'TO-DO: 
+		'		getting a list of non-inventory PARTs from V_ROUTER_LINE and merge to the result table (invDT)
+		'		while default the qty_onhand = 0 or NA
+		'		filtering by [... where PARTs not in (select PART from V_INVENTORY_MSTR)...]
+		'		[select RTRIM(PART_WC_OUTSIDE) PART, 0 as qty_onhand, UM_INVENTORY]
+		f.Intrinsic.String.Build("Part = '{0}'", v.Local.sDetailPart, v.Local.sFilter)
+		f.Data.DataView.Create("invDT", "singlePartDV", 22, v.Local.sFilter, "Part")
+		
+		
+		'6802
+		'june 6
+		'comment: the poDT below is to match PO with the WO
+		'		It could be that the non-inventory causing the mismatch in PARTs, 
+		'		as a result, the program uses the previous PART in place for the non-Inventory
+'		f.Intrinsic.String.Build("Job = '{0}' and Sequence = '{1}'", v.Local.sDetailJob, v.Local.sDetailSeq, v.Local.sFilter)
+		
+		
+		f.Intrinsic.String.Build("Job = '{0}' and Sequence = '{1}' and Part = '{2}'", v.Local.sDetailJob, v.Local.sDetailSeq, v.Local.sDetailPart, v.Local.sFilter)
+
+		f.Data.DataView.Create("poDT", "poDV", 22, v.Local.sFilter, "Job")
+		
+		f.Intrinsic.Control.If(v.DataView.invDT!singlePartDV.RowCount, =, 1)
+			v.Local.sDetailUM.Set(v.DataView.invDT!singlePartDV(0).um_inventory!FieldValTrim)
+			v.Local.iDetailQtyOnHand.Set(v.DataView.invDT!singlePartDV(0).qty_onhand!FieldVal)
+	
+			f.Intrinsic.Control.If(v.Local.iDetailQtyOnHand, <, v.Local.fDetailQtyReq)
+				'where are all the rev part.
+				f.Intrinsic.String.Left(v.Local.sDetailPart, 17, v.Local.sPartNoRev)
+				f.Intrinsic.String.Build("Part like '{0}%'", v.Local.sPartNoRev, v.Local.sFilter)
+				f.Data.DataView.Create("invDT", "allRevDV", 22, v.Local.sFilter, "Part")			
+					f.Intrinsic.Control.For(v.Local.iCntAllRev, 0, v.DataView.invDT!allRevDV.RowCount--, 1)
+						f.Intrinsic.Math.Add(v.DataView.invDT!allRevDV(v.Local.iCntAllRev).qty_onhand!FieldVal,  v.Local.iAllRevQtyOnHand, v.Local.iAllRevQtyOnHand)
+					f.Intrinsic.Control.Next(v.Local.iCntAllRev)				
+					f.Intrinsic.Math.Sub(v.Local.iAllRevQtyOnHand, v.Local.iDetailQtyOnHand, v.Local.iAllRevQtyOnHand)
+				f.Data.DataView.Close("invDT", "allRevDV")
+	
+				f.Intrinsic.Control.If(v.DataView.poDT!poDV.RowCount, =, 1)
+					f.Intrinsic.String.Build("Select vendor, name_vendor from v_vendor_master where vendor = '{0}'", v.DataView.poDT!poDV(0).vendor!FieldValTrim, v.Local.sSQL)
+					'f.ODBC.Connection!con.OpenCompanyConnection
+						f.Data.DataTable.CreateFromSQL("vendorName", "con", v.Local.sSQL)
+					'f.ODBC.Connection!con.Close			
+					
+					f.Intrinsic.Control.If(v.DataTable.vendorName.RowCount, =, 1)
+						v.Local.sPO_Vendor.Set(v.DataTable.vendorName(0).name_vendor!FieldValTrim)
+					f.Intrinsic.Control.EndIf
+					f.Data.DataTable.Close("vendorName")
+					v.Local.sPO_Number.Set(v.DataView.poDT!poDV(0).purchase_order!FieldValTrim)
+					v.Local.sPO_Due.Set(v.DataView.poDT!poDV(0).date_due_line!FieldValTrim)
+					v.Local.sPO_Qty_Ord.Set(v.DataView.poDT!poDV(0).qty_order!FieldValTrim)
+					v.Local.sPO_Qty_Rcvd.Set(v.DataView.poDT!poDV(0).qty_received!FieldValTrim)
+				f.Intrinsic.Control.EndIf
+				
+				f.Intrinsic.String.Build("insert into GCG_6802_MAT_SHORT (Part, Description, UM, Qty_Req, Qty_OnHand, Qty_OldRev, Work_Order, Work_Order_Suffix, WO_DueDate, Terminal, PO_Number, PO_Due, PO_Qty_Ord, PO_Qty_Rcvd, PO_Vendor, WO_Desc, WO_Part, WO_JOB_SUFFIX) values ('{0}', '{1}', '{2}', '{3}','{4}','{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}')", v.Local.sDetailPart.PSQLFriendly, v.Local.sDetailDescription.PSQLFriendly, v.Local.sDetailUM, v.Local.fDetailQtyReq, v.Local.iDetailQtyOnHand, v.Local.iAllRevQtyOnHand, v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sWODate, v.Caller.Terminal, v.Local.sPO_Number, v.Local.sPO_Due, v.Local.sPO_Qty_Ord, v.Local.sPO_Qty_Rcvd, v.Local.sPO_Vendor.PSQLFriendly, v.Local.sWODescription.PSQLFriendly, v.Local.sWOPart.PSQLFriendly, v.Local.sWOJobSuffix, v.Local.sSQL)
+				
+				'f.ODBC.Connection!con.OpenCompanyConnection
+					f.ODBC.Connection!con.Execute(v.Local.sSQL)
+				'f.ODBC.Connection!con.Close	
+				
+				
+				'6/27
+				'GCG6802
+				'For these parts that start with *, do not check for extra PO. Just fill with the related PO
+				'	For parts that do not start with *, check for the next POs until meet required qty, by PO_DUE ASC
+				''Extra POs
+				f.Intrinsic.String.Left(v.Local.sDetailPart,1,v.Local.sFirstChar)
+				'if part contains *, dont check for extra PO
+				f.Intrinsic.Control.If(v.Local.sFirstChar,!=,"*")
+					f.Intrinsic.String.Build("Part = '{0}' and FLAG_RECV_CLOSE <> 'Y' and QTY_ORDER > QTY_RECEIVED", v.Local.sDetailPart, v.Local.sFilter)
+					f.Data.DataView.Create("poDT", "poAllDV", 22, v.Local.sFilter, "date_due_line asc, purchase_order asc")
+				
+					f.Intrinsic.Control.If(v.DataView.poDT!poAllDV.RowCount, >, 0)
+						f.Intrinsic.String.Build("Delete From GCG_6802_MAT_SHORT Where WO_JOB_SUFFIX = '{0}' and PO_Number = ''", v.Local.sWOJobSuffix, v.Local.sSQL)
+						'f.ODBC.Connection!con.OpenCompanyConnection
+							f.ODBC.Connection!con.Execute(v.Local.sSQL)
+						'f.ODBC.Connection!con.Close	
+					f.Intrinsic.Control.EndIf
+					
+					
+					'reset running qty
+					v.Local.fRunningPOQty.Set(0)
+					
+'					f.Intrinsic.Control.If(v.Local.sDetailPart,=,"Q5110")
+'						Function.Intrinsic.Debug.InvokeDebugger
+'						Function.Intrinsic.Debug.Stop
+'						v.Local.sTemp.Declare(String)
+'						v.Local.sTemp.Set("")
+'					f.Intrinsic.Control.EndIf
+					
+					f.Intrinsic.Control.For(v.Local.iCntAllPo, 0, v.DataView.poDT!poAllDV.RowCount--, 1)
+						f.Intrinsic.Control.If(v.DataView.poDT!poAllDV(v.Local.iCntAllPo).FLAG_RECV_CLOSE!FieldValTrim, <>, "Y")
+							
+							'6/27
+							'GCG6802
+							'calculate running POQty to compare w req qty
+							
+							f.Intrinsic.String.Build("Select vendor, name_vendor from v_vendor_master where vendor = '{0}'", v.DataView.poDT!poAllDV(v.Local.iCntAllPo).vendor!FieldValTrim, v.Local.sSQL)
+								'f.ODBC.Connection!con.OpenCompanyConnection
+									f.Data.DataTable.CreateFromSQL("vendorName", "con", v.Local.sSQL)
+								'f.ODBC.Connection!con.Close			
+								
+								f.Intrinsic.Control.If(v.DataTable.vendorName.RowCount, =, 1)
+									v.Local.sPO_Vendor.Set(v.DataTable.vendorName(0).name_vendor!FieldValTrim)
+								f.Intrinsic.Control.EndIf
+								f.Data.DataTable.Close("vendorName")
+								v.Local.sPO_Number.Set(v.DataView.poDT!poAllDV(v.Local.iCntAllPo).purchase_order!FieldValTrim)
+								v.Local.sPO_Due.Set(v.DataView.poDT!poAllDV(v.Local.iCntAllPo).date_due_line!FieldValTrim)
+								v.Local.sPO_Qty_Ord.Set(v.DataView.poDT!poAllDV(v.Local.iCntAllPo).qty_order!FieldValTrim)
+								v.Local.sPO_Qty_Rcvd.Set(v.DataView.poDT!poAllDV(v.Local.iCntAllPo).qty_received!FieldValTrim)
+								
+								f.Intrinsic.Control.If(v.Local.iCntAllPo,=,0)
+									f.Intrinsic.String.Build("insert into GCG_6802_MAT_SHORT (Part, Description, UM, Qty_Req, Qty_OnHand, Qty_OldRev, Work_Order, Work_Order_Suffix, WO_DueDate, Terminal, PO_Number, PO_Due, PO_Qty_Ord, PO_Qty_Rcvd, PO_Vendor, WO_Desc, WO_Part, WO_JOB_SUFFIX) values ('{0}', '{1}', '{2}', '{3}','{4}','{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}')", v.Local.sDetailPart.PSQLFriendly, v.Local.sDetailDescription.PSQLFriendly, v.Local.sDetailUM, v.Local.fDetailQtyReq, v.Local.iDetailQtyOnHand, v.Local.iAllRevQtyOnHand, v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sWODate, v.Caller.Terminal, v.Local.sPO_Number, v.Local.sPO_Due, v.Local.sPO_Qty_Ord, v.Local.sPO_Qty_Rcvd, v.Local.sPO_Vendor.PSQLFriendly, v.Local.sWODescription.PSQLFriendly, v.Local.sWOPart.PSQLFriendly, v.Local.sWOJobSuffix, v.Local.sSQL)
+								f.Intrinsic.Control.Else
+									'req'd qty = 0
+									f.Intrinsic.String.Build("insert into GCG_6802_MAT_SHORT (Part, Description, UM, Qty_Req, Qty_OnHand, Qty_OldRev, Work_Order, Work_Order_Suffix, WO_DueDate, Terminal, PO_Number, PO_Due, PO_Qty_Ord, PO_Qty_Rcvd, PO_Vendor, WO_Desc, WO_Part, WO_JOB_SUFFIX) values ('{0}', '{1}', '{2}', '{3}','{4}','{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}')", v.Local.sDetailPart.PSQLFriendly, v.Local.sDetailDescription.PSQLFriendly, v.Local.sDetailUM, 0, v.Local.iDetailQtyOnHand, v.Local.iAllRevQtyOnHand, v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sWODate, v.Caller.Terminal, v.Local.sPO_Number, v.Local.sPO_Due, v.Local.sPO_Qty_Ord, v.Local.sPO_Qty_Rcvd, v.Local.sPO_Vendor.PSQLFriendly, v.Local.sWODescription.PSQLFriendly, v.Local.sWOPart.PSQLFriendly, v.Local.sWOJobSuffix, v.Local.sSQL)
+								f.Intrinsic.Control.EndIf
+								
+'								f.Intrinsic.String.Build("insert into GCG_6802_MAT_SHORT (Part, Description, UM, Qty_Req, Qty_OnHand, Qty_OldRev, Work_Order, Work_Order_Suffix, WO_DueDate, Terminal, PO_Number, PO_Due, PO_Qty_Ord, PO_Qty_Rcvd, PO_Vendor, WO_Desc, WO_Part, WO_JOB_SUFFIX) values ('{0}', '{1}', '{2}', '{3}','{4}','{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}')", v.Local.sDetailPart.PSQLFriendly, v.Local.sDetailDescription.PSQLFriendly, v.Local.sDetailUM, v.Local.fDetailQtyReq, v.Local.iDetailQtyOnHand, v.Local.iAllRevQtyOnHand, v.Local.sWOJob, v.Local.sWOSuffix, v.Local.sWODate, v.Caller.Terminal, v.Local.sPO_Number, v.Local.sPO_Due, v.Local.sPO_Qty_Ord, v.Local.sPO_Qty_Rcvd, v.Local.sPO_Vendor.PSQLFriendly, v.Local.sWODescription.PSQLFriendly, v.Local.sWOPart.PSQLFriendly, v.Local.sWOJobSuffix, v.Local.sSQL)
+				
+								'f.ODBC.Connection!con.OpenCompanyConnection
+									f.ODBC.Connection!con.Execute(v.Local.sSQL)
+								'f.ODBC.Connection!con.Close
+								
+								f.Intrinsic.Math.Add(v.Local.fRunningPOQty,v.Local.sPO_Qty_Ord, v.Local.fRunningPOQty)
+								f.Intrinsic.Math.Sub(v.Local.fRunningPOQty,v.Local.sPO_Qty_Rcvd, v.Local.fRunningPOQty)
+								f.Intrinsic.Control.If(v.Local.fRunningPOQty,>=,v.Local.fDetailQtyReq)
+									f.Intrinsic.Control.ExitFor(v.Local.iCntAllPo)
+								f.Intrinsic.Control.EndIf
+						f.Intrinsic.Control.EndIf
+					f.Intrinsic.Control.Next(v.Local.iCntAllPo)
+					
+					f.Data.DataView.Close("poDT", "poAllDV")
+				f.Intrinsic.Control.EndIf
+				
+				
+				v.Local.sSQL.Set("")
+				v.Local.sFilter.Set("")
+				
+				v.Local.sDetailPart.Set("")
+				v.Local.sDetailDescription.Set("")
+				v.Local.sDetailUM.Set("")
+				v.Local.iDetailQtyOnHand.Set(0)
+				v.Local.fDetailQtyReq.Set(0)
+				v.Local.sDetailJob.Set("")
+				v.Local.sDetailSeq.Set("")
+				
+				v.Local.sPO_Number.Set("")
+				v.Local.sPO_Vendor.Set("")
+				v.Local.sPO_Due.Set("")
+				v.Local.sPO_Qty_Ord.Set("")
+				v.Local.sPO_Qty_Rcvd.Set("")
+				
+				v.Local.sPartNoRev.Set("")
+				v.Local.iAllRevQtyOnHand.Set(0)					
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		'f.Data.DataTable.Close("childBomDT")
+		f.Data.DataView.Close("invDT", "singlePartDV")
+		f.Data.DataView.Close("poDT", "poDV")
+	f.Intrinsic.Control.Next(v.Local.iCntWoDetail)
+	f.Data.DataView.Close("woOpDT", "detailDV")
+f.Intrinsic.Control.Next(v.Local.iCntWoHeader)
+
+
+Program.Sub.getPrePrintWOs.End
+
+Program.Sub.getDistinctDT.Start
+f.Data.DataView.Create("woDT", "woDV",22)
+f.Data.DataView.ToDataTableDistinct("woDT", "woDV", "distPartDT", "Part", true)
+f.Data.DataView.ToDataTableDistinct("woDT", "woDV", "distJobDT", "Job", true)
+Program.Sub.getDistinctDT.End
+
+'get customer names before print
+Program.Sub.GetCustomerName.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	V.Local.bExists.Declare
+	
+	Function.Data.Dictionary.Exists("dictCustomerName",V.Local.bExists)
+	f.Intrinsic.Control.If(V.Local.bExists)
+		f.Data.Dictionary.Close("dictCustomerName")
+	f.Intrinsic.Control.EndIf
+	
+	
+	f.Intrinsic.String.Build("select * from GCG_6802_MAT_SHORT where RTRIM(TERMINAL)='{0}'", v.Caller.Terminal, v.Local.sSQL)
+	
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Intrinsic.Control.If(v.DataTable.dtRef.Exists)
+			f.Data.Datatable.Close("dtRef")
+		f.Intrinsic.Control.EndIf
+		f.Data.Datatable.CreateFromSQL("dtRef", "con", v.Local.sSQL, False)		
+		
+		f.Intrinsic.String.Build("select JOB, NAME_CUSTOMER from V_CUSTOMER_MASTER C left join V_JOB_HEADER J on C.CUSTOMER = J.CUSTOMER where J.JOB in (select REF.WORK_ORDER from GCG_6802_MAT_SHORT REF where RTRIM(REF.TERMINAL)='{0}') group by JOB, NAME_CUSTOMER", v.Caller.Terminal, v.Local.sSQL)
+		f.Data.Dictionary.CreateFromSQL("dictCustomerName", "con", v.Local.sSQL)
+		f.Data.Dictionary.SetDefaultReturn("dictCustomerName", "")
+		
+		f.Data.Datatable.FillFromDictionary("dtRef", "dictCustomerName", "WORK_ORDER", "CUSTOMER_NAME")
+		
+		f.Data.Datatable.AcceptChanges("dtRef")
+		
+		f.Data.Datatable.SaveToDB("dtRef", "con", "GCG_6802_MAT_SHORT", "WORK_ORDER*!*WORK_ORDER_SUFFIX*!*TERMINAL*!*PART*!*QTY_REQ*!*QTY_ONHAND*!*QTY_OLDREV*!*PO_NUMBER*!*PO_DUE*!*PO_QTY_ORD*!*PO_QTY_RCVD*!*PO_VENDOR", 256)
+		f.Data.Datatable.Close("dtRef")
+		f.Data.Dictionary.Close("dictCustomerName")
+	'f.ODBC.Connection!con.Close
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetCustomerName.End
+
+Program.Sub.CheckData.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	f.Intrinsic.String.Build("select * from GCG_6802_MAT_SHORT where RTRIM(TERMINAL)='{0}'", v.Caller.Terminal, v.Local.sSQL)
+	
+	'f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.Datatable.CreateFromSQL("dtRef2", "con", v.Local.sSQL)
+	'f.ODBC.Connection!con.Close
+	f.Data.Datatable.Close("dtRef2")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.CheckData.End
+
+Program.Sub.PrintReport.Start
+f.Intrinsic.Control.Try
+
+	v.Local.iRunID.Declare
+	v.Local.iLogID.Declare
+	v.Local.sParams.Declare
+	v.Local.sParamsValues.Declare
+	v.Local.iRPTID.Declare(Long, 0)
+	
+	
+	'update CustomerName before print
+	f.Intrinsic.Control.CallSub(GetCustomerName)
+'	f.Intrinsic.Control.CallSub(CheckData)
+	
+	f.Global.BI.GetRunID(v.Local.iRunID)
+	
+	f.Global.BI.GetIDFromName("GCG_6802_BI_Mat_Shortage.rpt", v.Local.iRPTID)
+	f.Global.BI.StartLogging(v.Local.iRunID, -1, -1, "GCG_6802_BI_Mat_Shortage.rpt", v.Local.iLogID)
+	f.Global.BI.StopLogging(v.Local.iLogID)
+	
+	v.Local.sParams.Set("paramTerminal")
+	v.Local.sParamsValues.Set(v.caller.Terminal)
+	f.Global.BI.PrintReport(v.Local.iRPTID, 0, v.Local.sParams, v.Local.sParamsValues, "", True)
+	'f.Global.BI.PrintReport(100009, 0, v.Local.sParams, v.Local.sParamsValues, "", True)
+	
+	f.Intrinsic.UI.CloseWaitDialog
+	
+	f.Data.DataView.Close("woDT", "woDV")
+	f.Data.DataTable.Close("invDT")
+	f.Data.DataTable.Close("poDT")
+	f.Data.DataTable.Close("distJobDT")
+	f.Data.DataTable.Close("distPartDT")
+	f.Data.DataTable.Close("woOpDT")
+	f.Data.DataTable.Close("woDT")
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+
+Program.Sub.PrintReport.End
+
+'Export to Excel
+Program.Sub.ExportToExcelFile.Start
+f.Intrinsic.Control.Try
+	v.Local.sFileName.Declare(String)
+	v.Local.boolExcelExists.Declare(Boolean)
+	f.Automation.MSExcel.CheckPresence(v.Local.boolExcelExists)
+	
+	f.Intrinsic.String.Build("Material Shortage Report {0}", v.Ambient.Now.FormatMM-DD-YYYY, v.Local.sFileName)
+	
+	'file dialog
+	f.Intrinsic.UI.ShowSaveFileDialog(v.Local.sFileName, "*.xls", "", v.Local.sFileName)
+
+	'CANCEL
+	f.Intrinsic.Control.If(v.Local.sFileName,=,"***CANCEL***")
+		'unload
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	'check if Excel exist
+	f.Intrinsic.Control.If(v.Local.boolExcelExists)
+		'export to excel
+		f.Intrinsic.String.Build("{0}{1}",v.Local.sFileName,".xlsx",v.Local.sFileName)
+		gui.F_Shortage.GsgcResult.Export(v.Local.sFileName,"xlsx")
+	
+	'no Excel
+	f.Intrinsic.Control.Else
+		'export to csv
+		f.Intrinsic.String.Build("{0}{1}",v.Local.sFileName,".csv",v.Local.sFileName)
+		gui.F_Shortage.GsgcResult.Export(v.Local.sFileName,"csv")
+	
+	f.Intrinsic.Control.EndIf
+	
+	'execute
+	F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileName,"","",1)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.ExportToExcelFile.End
+
+Program.Sub.cmdDummy_Click.Start
+f.Intrinsic.Control.CallSub(GetData)
+	f.Intrinsic.Control.CallSub(FormatGrid)
+
+	f.Intrinsic.Control.If(v.Global.sFirstload,=,True)
+	gui.F_Shortage..ContextMenuCreate("cmOptions")
+	gui.F_Shortage..ContextMenuAddItem("cmOptions","cmiExport",v.Enum.MenuItemType!Button,"Export")
+	gui.F_Shortage..ContextMenuSetItemEventHandler("cmOptions","cmiExport","ExportToExcelFile")
+	gui.F_Shortage..ContextMenuShow("cmOptions", 2000,2000)
+	gui.F_Shortage.GsgcResult.ContextMenuAttach("cmOptions")
+		v.Global.sFirstload.Set(False)
+	f.Intrinsic.Control.EndIf
+Program.Sub.cmdDummy_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$slechuga$}$20240125145510713$}$JThvcDs0LK9ms+2I1TBHI1QeT5z/Z0krj90QfXuPfFQnqybopMdHfaQ8uqXJwSxNVntWv5DgTbABIJmWeUAzCA==
+Program.Sub.Comments.End
